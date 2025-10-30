@@ -250,7 +250,7 @@ class Promo_codes extends Security_Controller {
             "total" => -$discount_amount,
         );
 
-        $item_model_name = "this->" . ucfirst($type) . "_items_model";
+        $item_model_name = ucfirst($type) . "_items_model";
         $item_data[$type . "_id"] = $item_id;
         $this->$item_model_name->save($item_data);
 
